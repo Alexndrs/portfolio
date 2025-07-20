@@ -1,1 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@utility no-scrollbar {
+    @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
+@theme {
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-serif: 'Playfair Display', serif;
+}
+
+body {
+    @apply text-indigo-900/50 dark:text-amber-100/50;
+    @apply font-mono text-sm;
+    @apply bg-gradient-to-t from-slate-300 to-cyan-50 dark:from-neutral-950 dark:to-neutral-900;
+}
+
+.highlight {
+    @apply text-indigo-800/100 dark:text-amber-100/100;
+}
+
+.bold {
+    @apply font-semibold;
+}
+
+.italic {
+    @apply italic;
+    @apply font-serif;
+}
+
+.underline {
+    @apply underline;
+}

@@ -1,3 +1,5 @@
 export default function About() {
-    return <h1 className="text-2xl w-full flex justify-center">I'm Alexandre, Nice to meet you</h1>;
+    return <div className="max-w-[900px] mx-auto flex flex-col px-10">
+        I'm Alexandre, nice to meet you !
+    </div>
 }

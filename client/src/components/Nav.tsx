@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState, useCallback } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
     const location = useLocation();
@@ -50,9 +51,9 @@ export default function Nav() {
 
 
     return (
-        <nav className="relative px-5 py-3 rounded-full border-t-3 border-t-white/5 border-b-1 border-b-black/10 shadow-xl flex justify-around items-center gap-8 z-20 backdrop-blur-md bg-neutral-900/20 md:bg-neutral-800/20" ref={navRef}>
+        <nav className="relative px-5 py-3 rounded-full border-t-3 dark:border-t-white/5 border-t-white/30 border-b-1 border-b-black/10 shadow-xl flex justify-around items-center gap-8 z-20 backdrop-blur-md dark:bg-neutral-500/4 dark:shadow-2xl highlight" ref={navRef}>
             <div
-                className="absolute bg-fuchsia-300/10 border-t-2 border-t-white/5 border-b-1 border-b-black/5 shadow-sm flex h-10 rounded-full transition-all duration-300 ease-out z-30"
+                className="absolute bg-fuchsia-900/8 dark:bg-fuchsia-300/10 border-t-2 border-t-white/30 dark:border-t-white/5 border-b-1 border-b-black/5 shadow-sm flex h-10 rounded-full transition-all duration-300 ease-out z-30"
                 style={{
                     width: `${indicatorStyle.width}px`,
                     left: `${indicatorStyle.left}px`,
@@ -66,12 +67,15 @@ export default function Nav() {
                 <Link
                     key={item.path}
                     to={item.path}
-                    className={`relative z-40 px-5 py-3 rounded-full transition-colors duration-200 ${location.pathname === item.path ? 'text-white font-medium' : 'text-gray-400 hover:text-gray-200'}`}
+                    className={`relative z-40 px-5 py-3 rounded-full transition-colors duration-200 ${location.pathname === item.path ? ' font-medium' : ''}`}
                     data-path={item.path}
                 >
                     {item.label}
                 </Link>
             ))}
+            <div className="relative z-40 border-l border-black/20 dark:border-white/10 pl-5">
+                <ThemeToggle />
+            </div>
         </nav>
     );
 }

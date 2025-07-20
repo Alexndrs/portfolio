@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 
 import Nav from "./components/Nav";
+import { ThemeProvider } from "./contexts/ThemePovider";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,18 +13,20 @@ import Blog from "./pages/Blog";
 
 export default function App() {
   return (
-    <Router>
-      <div className="absolute bottom-5 md:top-5 md:bottom-auto w-full flex justify-center">
-        <Nav />
-      </div>
+    <ThemeProvider>
+      <Router>
+        <div className="absolute bottom-5  w-full flex justify-center">
+          <Nav />
+        </div>
 
-      <div className="bg-gradient-to-t from-neutral-900 to-neutral-800 w-full h-screen py-10 md:py-13 text-slate-300">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
-      </div>
-    </Router>
+        <div className="w-full h-screen pb-30 pt-10 md:pb-5 md:pt-30 overflow-y-auto no-scrollbar">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }

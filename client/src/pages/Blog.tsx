@@ -1,3 +1,5 @@
 export default function Blog() {
-    return <h1 className="text-2xl">Whatever goes through my mind</h1>;
+    return <div className="max-w-[900px] mx-auto flex flex-col px-10">
+        Whatever goes through my mind
+    </div>
 }
