@@ -25,7 +25,7 @@ export default function Home() {
                     name="Portfolio"
                     description="This portfolio website, built with React and TypeScript, showcases my projects and skills."
                     startDate="2025"
-                    endDate=""
+                    endDate="2025"
                     tags={["React", "TypeScript", "Tailwind CSS"]}
                     githubLink="https://github.com/Alexndrs/portfolio"
                     liveLink=""
