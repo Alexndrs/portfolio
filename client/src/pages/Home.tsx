@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import { ProjectCard } from "../components/ProjectCard";
 
 export default function Home() {
     return <div className="max-w-[900px] mx-auto flex flex-col px-10">
 
-        <div className="mb-30 pb-5 border-b border-black/10 dark:border-white/10 flex flex-col w-full">
+        <div className="mb-15 pb-5 flex flex-col w-full">
 
-            <p className="mb-4">
+            <p className="mb-6">
                 Hey there ! I'm <span className="highlight bold text-lg">Alexandre Dréan</span> — a Software Engineer student who loves <span className="highlight italic">building</span> things.
             </p>
-            <p className="mb-4">
+            <p className="mb-6">
                 I'm wrapping up my <span className="highlight bold">Master's in Computer Science</span> and have spent the past few years crafting full-stack apps, diving into machine learning.
             </p>
             <p>
@@ -17,19 +18,9 @@ export default function Home() {
         </div>
 
 
-
-        <div className="mb-30 pb-5 flex flex-col w-full">
-            <div className="highlight bold">My last Projects</div>
-            <div className="flex flex-col gap-5 mt-5">
-                <ProjectCard
-                    name="Portfolio"
-                    description="This portfolio website, built with React and TypeScript, showcases my projects and skills."
-                    startDate="2025"
-                    endDate=""
-                    tags={["React", "TypeScript", "Tailwind CSS"]}
-                    githubLink="https://github.com/Alexndrs/portfolio"
-                    liveLink=""
-                />
+        <div className="mb-10 pb-5 flex-col w-full">
+            <div className="highlight bold">Selected Projects</div>
+            <div className="flex flex-col gap-5 my-5 border-l-10 border-black/2 dark:border-white/1">
                 <ProjectCard
                     name="chatbotHub"
                     description="A full-stack application for using chatbot from multiple providers with a unified interface."
@@ -48,35 +39,32 @@ export default function Home() {
                     githubLink="https://github.com/Alexndrs/pokemon-generator"
                     liveLink=""
                 />
-                <ProjectCard
-                    name="Funding Quest"
-                    description="A question/answer form application under form of a chat that processes user input to determine if their research project is eligible for funding. I used llama model through Groq API and arxiv API for generating a state of the art, some advice and a custom report."
-                    startDate="2025"
-                    endDate=""
-                    tags={["React", "TypeScript", "CSS", "fastAPI", "Python", "arxiv API", "LLM", "Prompt Engineering", "Azure webApp", "Docker"]}
-                    githubLink=""
-                    liveLink="https://www.diagcir.fr/"
-                />
-                <ProjectCard
-                    name="Diffusion model for anomalies detection - NDA"
-                    description='A diffusion model based framework for detecting anomalies in tabular data inspired of two state of the art methods : Ahmed, Imtiaz, et al. "Graph regularized autoencoder and its application in unsupervised anomaly detection.", Livernoche, Victor, et al. "On diffusion modeling for anomaly detection." -
-                    Submitted a paper for ICML 2025 but it got rejected. NDA prevents me from sharing the code and the paper publicly.'
-                    startDate="2024"
-                    endDate=""
-                    tags={["Python", "PyTorch", "anomaly detection", "Diffusion Models", "Graph Neural Networks"]}
-                    githubLink=""
-                    liveLink=""
-                />
-                <ProjectCard
-                    name="Forum Aster"
-                    description='My first website coded while volunteering for the Forum Aster association. It is a website to present an event where student from institut polytechnique meet companies. It is a static website coded in HTML, CSS and JS.'
-                    startDate="2022"
-                    endDate="2023"
-                    tags={["HTML", "CSS", "JavaScript"]}
-                    githubLink=""
-                    liveLink="https://forumaster.fr/"
-                />
+            </div>
+            <Link to="./work" className="bold underline">See more...</Link>
+        </div>
+        <div className="mb-10 pb-5 flex flex-col w-full">
+            <div className="highlight bold">Quick snapshot</div>
+            <div className="flex flex-col gap-5 mt-5 border-l-10 border-black/2 dark:border-white/1 pl-5">
+                <p>Machine Learning Research Intern @ <a href="" className="highlight bold italic">LIRIS</a> <br />
+                    Worked on Anomaly detection, collaborated with PhD researchers. <br />
+                    more details <a className="bold underline" href="">Here</a>
+                </p>
+                <p>Software engineer freelance @ <a href="" className="highlight bold italic">Funding Quest</a> <br />
+                    Worked on full-stack system design, LLM integration, and prompt engineering. <br />
+                    more details <a className="bold underline" href="">Here</a>
+                </p>
+                <p>Engineering degree @ <a href="" className="highlight bold italic">ENSTA Paris</a> + Master's @ <a href="" className="highlight bold italic">Polytechnique Montréal</a> <br />
+                    more details <a className="bold underline" href="">Here</a>
+                </p>
             </div>
         </div>
-    </div>;
+        <div className="mb-30 flex flex-col w-full">
+            <div className="highlight bold">Let's connect</div>
+            <div className="flex flex-col gap-3 mt-5 border-l-10 border-black/2 dark:border-white/1 pl-5">
+                <a href="/Alex_resume.pdf">Download my resume</a>
+                <Link to="/contact" >Contact me</Link>
+                <Link to="/blog" >Read the blog</Link>
+            </div>
+        </div>
+    </div >;
 }

@@ -8,7 +8,7 @@ export function ProjectCard({ name, description, startDate, endDate, tags, githu
     liveLink?: string;
 }) {
 
-    return <div className="flex w-full bg-transparent hover:bg-black/2 dark:hover:bg-white/1 p-4 rounded-xl transition-colors duration-200 flex-col md:flex-row">
+    return <div className="flex w-full bg-transparent hover:bg-black/2 dark:hover:bg-white/1 p-4 transition-colors duration-200 flex-col md:flex-row">
         <div className="w-24 flex flex-shrink-0 text-xs">{startDate}{endDate ? ' - ' + endDate : ''}</div>
         <div className="flex flex-col flex-1">
             <div className="highlight flex items-center">

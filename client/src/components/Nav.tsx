@@ -15,7 +15,8 @@ export default function Nav() {
         { path: "/", label: "Home" },
         { path: "/work", label: "Work" },
         { path: "/about", label: "About" },
-        { path: "/blog", label: "Blog" }
+        { path: "/blog", label: "Blog" },
+        { path: "/contact", label: "Contact" }
     ];
 
     const updateIndicator = useCallback(() => {
