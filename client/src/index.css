@@ -34,3 +34,7 @@ body {
 .underline {
     @apply underline;
 }
+
+.flash {
+    @apply text-indigo-500/100 dark:text-amber-200/100;
+}

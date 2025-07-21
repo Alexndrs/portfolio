@@ -10,6 +10,7 @@ import { ThemeProvider } from "./contexts/ThemePovider";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import Work from "./pages/Work";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <div className="w-full h-screen pb-30 pt-10 md:pb-5 md:pt-30 overflow-y-auto no-scrollbar">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/work" element={<Work />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
           </Routes>

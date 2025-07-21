@@ -13,6 +13,7 @@ export default function Nav() {
 
     const navItems = [
         { path: "/", label: "Home" },
+        { path: "/work", label: "Work" },
         { path: "/about", label: "About" },
         { path: "/blog", label: "Blog" }
     ];
@@ -61,7 +62,6 @@ export default function Nav() {
                     transform: 'translateY(-50%)',
                     opacity: indicatorStyle.opacity
                 }}
-
             />
             {navItems.map(item => (
                 <Link
