@@ -12,9 +12,10 @@ export default function Home() {
             <p className="mb-6">
                 I'm wrapping up my <span className="highlight bold">Master's in Computer Science</span> and have spent the past few years crafting full-stack apps, diving into machine learning.
             </p>
-            <p>
+            <p className="mb-6">
                 I thrive on shipping, solving real-world problems, and <span className="highlight italic">turning ideas into useful, elegant products</span>.
             </p>
+            <p>I plan on graduating in 2026 so <span className="bold highlight">I'm actively seeking a summer internship for 2026</span>. Feel free to <Link to='/contact' className="bold highlight">contact me</Link></p>
         </div>
 
 

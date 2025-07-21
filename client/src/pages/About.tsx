@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import { ProjectCard } from "../components/ProjectCard"
 
 export default function About() {
     return <div className="max-w-[900px] mx-auto flex flex-col px-10">
         <div className="mb-30 pb-5 flex flex-col w-full">
+            <div className="mb-10">Hello ! I'm Alexandre, a computer science student currently in Montréal ! I plan on graduating in 2026 so <span className="bold highlight">I'm actively seeking a summer internship for 2026</span>. Feel free to <Link to='/contact' className="bold highlight">contact me</Link></div>
             <div className="flex flex-col gap-5 mt-5">
                 <div className="highlight bold">Education</div>
                 <ProjectCard
@@ -40,7 +42,7 @@ export default function About() {
                     description="That was a great experience, I was in charge of the website and the social media accounts"
                     startDate="2022"
                     endDate="2023"
-                    tags={["HTML", "CSS", "JavaScript", "Community Management"]}
+                    tags={["Web dev debut", "Community Management"]}
                     githubLink=""
                     liveLink=""
                 />

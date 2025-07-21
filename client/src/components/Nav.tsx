@@ -53,9 +53,9 @@ export default function Nav() {
 
 
     return (
-        <nav className="relative px-5 py-3 rounded-full border-t-3 dark:border-t-white/5 border-t-white/30 border-b-1 border-b-black/10 shadow-xl flex justify-around items-center gap-8 z-20 backdrop-blur-md dark:bg-neutral-500/4 dark:shadow-2xl highlight" ref={navRef}>
+        <nav className="relative px-5 py-3 rounded-full border-t-3 dark:border-t-white/5 border-t-white/30 border-b-1 border-b-black/10 shadow-xl flex justify-around items-center gap-3 md:gap-8 z-20 backdrop-blur-md dark:bg-neutral-500/4 dark:shadow-2xl highlight" ref={navRef}>
             <div
-                className="absolute bg-fuchsia-900/8 dark:bg-fuchsia-300/10 border-t-2 border-t-white/30 dark:border-t-white/5 border-b-1 border-b-black/5 shadow-sm flex h-10 rounded-full transition-all duration-300 ease-out z-30"
+                className="absolute bg-fuchsia-900/8 dark:bg-fuchsia-300/10 border-t-2 border-t-white/30 dark:border-t-white/5 border-b-1 border-b-black/5 shadow-sm flex h-8 md:h-10 rounded-full transition-all duration-300 ease-out z-30"
                 style={{
                     width: `${indicatorStyle.width}px`,
                     left: `${indicatorStyle.left}px`,
@@ -68,13 +68,13 @@ export default function Nav() {
                 <Link
                     key={item.path}
                     to={item.path}
-                    className={`relative z-40 px-5 py-3 rounded-full transition-colors duration-200 ${location.pathname === item.path ? ' font-medium' : ''}`}
+                    className={`relative z-40 px-1 py-1 md:px-5 md:py-3 rounded-full transition-colors duration-200 ${location.pathname === item.path ? ' font-medium' : ''}`}
                     data-path={item.path}
                 >
                     {item.label}
                 </Link>
             ))}
-            <div className="relative z-40 border-l border-black/20 dark:border-white/10 pl-5">
+            <div className="relative z-40 border-l border-black/20 dark:border-white/10 pl-1 md:pl-5">
                 <ThemeToggle />
             </div>
         </nav>
