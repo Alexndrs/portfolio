@@ -1,0 +1,20 @@
+[
+    {
+        "title": "My First Blog Post",
+        "slug": "my-first-post",
+        "description": "Un article de test pour le blog",
+        "link": "posts/my-first-post.md"
+    },
+    {
+        "title": "Another Article",
+        "slug": "another-post",
+        "description": "Encore un autre article cool",
+        "link": "posts/another-post.md"
+    },
+    {
+        "title": "Pokemons generator with DDPM",
+        "slug": "pokemons-generator-with-ddpm",
+        "description": "Un article sur la génération de Pokemons avec DDPM",
+        "link": "https://raw.githubusercontent.com/Alexndrs/pokemon-generator/main/README.md"
+    }
+]

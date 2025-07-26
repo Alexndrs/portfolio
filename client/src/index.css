@@ -10,16 +10,17 @@
 @theme {
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
 }
 
 body {
-    @apply text-indigo-900/50 dark:text-amber-100/50;
+    @apply text-slate-900/50 dark:text-amber-100/50;
     @apply font-mono text-sm;
-    @apply bg-gradient-to-t from-slate-300 to-cyan-50 dark:from-neutral-950 dark:to-neutral-900;
+    @apply bg-gradient-to-t from-slate-300 to-slate-50 dark:from-neutral-900 dark:to-neutral-800;
 }
 
 .highlight {
-    @apply text-indigo-800/100 dark:text-amber-100/100;
+    @apply text-slate-600/100 dark:text-amber-100/100;
 }
 
 .bold {
@@ -28,7 +29,7 @@ body {
 
 .italic {
     @apply italic;
-    @apply font-serif;
+    @apply font-serif font-bold;
 }
 
 .underline {
