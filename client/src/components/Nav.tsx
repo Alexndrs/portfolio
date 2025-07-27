@@ -53,7 +53,7 @@ export default function Nav() {
 
 
     return (
-        <nav className="relative px-5 py-3 rounded-full border-t-3 dark:border-t-white/5 border-t-white/30 border-b-3 border-b-black/10 shadow-xl flex justify-around items-center gap-3 md:gap-8 z-20 bg-slate-300/60 backdrop-blur-xl dark:bg-neutral-500/4 dark:shadow-2xl highlight" ref={navRef}>
+        <nav className="fixed px-5 py-3 rounded-full border-t-3 dark:border-t-white/5 border-t-white/30 border-b-3 border-b-black/10 shadow-xl flex justify-around items-center gap-3 md:gap-8 z-20 bg-neutral-300/60 backdrop-blur-xl dark:bg-neutral-800/70 dark:shadow-2xl highlight" ref={navRef}>
             <div
                 className="absolute bg-slate-900/8 dark:bg-slate-300/10 border-t-2 border-t-white/30 dark:border-t-white/5 border-b-1 border-b-black/5 shadow-sm flex h-8 md:h-10 rounded-full transition-all duration-300 ease-out z-30"
                 style={{

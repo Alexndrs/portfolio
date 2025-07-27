@@ -85,7 +85,8 @@ export function CodeBlock({ language, value }: { language: string; value: string
                 language={language}
                 style={oneDark}
                 customStyle={{
-                    background: 'rgba(255,255,255,0.05)',
+                    // background: 'rgba(255,255,255,0.05)',
+                    background: 'transparent',
                     padding: '0.8rem',
                     borderRadius: '5px',
                     margin: '0.3rem 0',

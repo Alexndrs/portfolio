@@ -18,11 +18,11 @@ export default function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="absolute bottom-5  w-full flex justify-center">
+        <div className="fixed bottom-18 md:bottom-25  w-full flex justify-center">
           <Nav />
         </div>
 
-        <div className="w-full h-screen pb-30 pt-10 md:pb-5 md:pt-30 overflow-y-auto no-scrollbar">
+        <div className="w-full pb-30 min-h-[100vh] pt-10 md:pb-5 md:pt-30 overflow-y-auto no-scrollbar">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/work" element={<Work />} />

@@ -3,8 +3,11 @@ import ReactMarkdown from 'react-markdown';
 import { CodeBlock } from '../components/codeBlock';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw'
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import { useEffect, useState } from 'react'
 import 'highlight.js/styles/github.css'
+import 'katex/dist/katex.min.css';
 import type { ComponentPropsWithoutRef } from 'react';
 
 type CodeComponentProps = ComponentPropsWithoutRef<'code'> & {
@@ -27,7 +30,7 @@ function rewriteRelativeImagePaths(text: string, relativeURL: string): string {
     // e.g: if relativeURL is "https://raw.githubusercontent.com/Alexndrs/pokemon-generator/main"
     //  and the text contains <img src="./backend/samples/generated_samples_1700.png" width="76%" alt="Chat demo" />
     // replace the src with "https://raw.githubusercontent.com/Alexndrs/pokemon-generator/main/backend/samples/generated_samples_1700.png"
-    return text.replace(/<img\s+src="([^"]+)"\s+[^>]*>/g, (match, src) => {
+    return text.replace(/<img\s+src="([^"]+)"\s+[^>]*>/g, (_, src) => {
         const absoluteSrc = new URL(src, relativeURL).href;
         return `<img src="${absoluteSrc}" />`;
     });
@@ -44,7 +47,7 @@ const BlogPost = () => {
             .then((res) => res.json())
             .then((posts) => {
 
-                const post = posts.find((p: { slug: string }) => p.slug === slug);
+                const post = posts.find((p: { slug: string, link: string }) => p.slug === slug);
                 console.log('Found post:', post);
 
                 if (!post) {
@@ -70,26 +73,11 @@ const BlogPost = () => {
             });
     }, [slug]);
 
-
-
-
-    // useEffect(() => {
-
-
-    //     fetch(`/posts/${slug}.md`)
-    //         .then((res) => res.text())
-    //         .then((text) => {
-    //             console.log('Fetched Markdown:', text)
-    //             setContent(text)
-    //         })
-    //         .catch(() => setContent('# 404 - Not Found\nLe fichier markdown n\'a pas été trouvé.'))
-    // }, [slug])
-
     return (
-        <div className="max-w-[900px] mx-auto flex flex-col px-10">
+        <div className="max-w-[900px] mx-auto flex flex-col px-10 blog-post mb-75">
             <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeRaw]}
+                remarkPlugins={[remarkGfm, remarkMath]}
+                rehypePlugins={[rehypeRaw, rehypeKatex]}
                 components={{
                     code({ className, children, inline }: CodeComponentProps) {
 

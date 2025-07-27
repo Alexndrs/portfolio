@@ -16,7 +16,7 @@
 body {
     @apply text-slate-900/50 dark:text-amber-100/50;
     @apply font-mono text-sm;
-    @apply bg-gradient-to-t from-slate-300 to-slate-50 dark:from-neutral-900 dark:to-neutral-800;
+    @apply bg-gradient-to-t from-neutral-300 to-slate-50 dark:from-neutral-900 dark:to-neutral-800;
 }
 
 .highlight {
@@ -38,4 +38,69 @@ body {
 
 .flash {
     @apply text-indigo-500/100 dark:text-amber-200/100;
+}
+
+
+.blog-post {
+    @apply font-sans
+}
+
+.blog-post h1 {
+    @apply text-3xl font-semibold mb-4;
+}
+
+.blog-post h2 {
+    @apply text-2xl font-semibold mb-3;
+}
+
+.blog-post h3 {
+    @apply text-xl font-medium mb-2;
+}
+
+.blog-post h4 {
+    @apply text-lg font-medium mb-1;
+}
+
+.blog-post blockquote {
+    @apply border-l-4 border-white/8 pl-2 italic font-serif my-2 py-2;
+}
+
+.blog-post blockquote ul {
+    @apply list-none pl-0 mb-2;
+}
+
+.blog-post ol {
+    @apply list-decimal pl-5 mb-4;
+}
+
+.blog-post ul {
+    @apply list-disc pl-5 mb-4;
+}
+
+.blog-post code,
+.blog-post .token-line {
+    background: transparent !important;
+}
+
+
+/* Make sure tables are correclty aligned and nicely displayed */
+
+.blog-post table {
+    @apply w-full border-collapse;
+}
+
+.blog-post th, thead {
+    @apply bg-neutral-800/5 text-neutral-800/70 dark:bg-white/5 dark:text-amber-100 p-2;
+}
+
+.blog-post td {
+    @apply p-2 border border-neutral-800/20 dark:border-neutral-600;
+}
+
+.blog-post hr {
+    @apply my-10 border-t border-neutral-800/5 dark:border-neutral-600;
+}
+
+.blog-post pre {
+    @apply bg-black/80 dark:bg-white/5 p-1 rounded-lg overflow-x-auto;
 }
